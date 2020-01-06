@@ -9,7 +9,11 @@ function htmlTask(){
 	.pipe(sourcemaps.init())
 	.pipe(pug({
 		pretty:false,
-		doctype:"html"
+		doctype:"html",
+		locals: {
+			pageTitle: "Whatever"
+		}
+		
 	}))
 	.pipe(rename(function(path){
 		if(path.basename != "index"){
@@ -20,6 +24,7 @@ function htmlTask(){
 		else{
 			path.extname = ".html";
 		}
+		
 	}))
 	.pipe(gulp.dest("dist"))
 	.pipe(connect.reload());

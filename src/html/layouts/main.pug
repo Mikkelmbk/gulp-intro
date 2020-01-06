@@ -4,7 +4,8 @@ html(lang="en")
 		meta(charset="UTF-8")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		meta(http-equiv="X-UA-Compatible", content="ie=edge")
-		title Document
+		block title
+			
 	body
 		header
 			a(href="#!").siteBrand Company Brand
@@ -12,10 +13,9 @@ html(lang="en")
 				ul
 					li
 						a(href="/") Forside
-
 					li
 						a(href="/kontakt") Kontakt
-					
+		//- block content er en variabel placeret her så man kan tilføje indhold fra hovedfilerne
 		block content
 		footer
 			p Copyright &copy; 2020
