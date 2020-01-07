@@ -1,5 +1,5 @@
 var connect = require("gulp-connect");
-var { watchHTML, htmlTask } = require("./tasks/html");
+var { watchHTML, htmlTask, scssTask } = require("./tasks/html");
 
 function watch(){
 	watchHTML();
@@ -13,6 +13,7 @@ function watch(){
 
 function build(done){
 	htmlTask();
+	scssTask();
 	done();
 }
 
