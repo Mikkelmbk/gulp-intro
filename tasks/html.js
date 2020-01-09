@@ -5,6 +5,8 @@ var connect = require("gulp-connect");
 var pug = require("gulp-pug");
 
 
+
+
 function htmlTask(){
 	return gulp.src("src/html/*.pug")
 	.pipe(sourcemaps.init())
@@ -28,9 +30,7 @@ function htmlTask(){
 		
 	}))
 	.pipe(gulp.dest("dist"))
-	.pipe(connect.reload());
-
-	
+	.pipe(connect.reload());	
 }
 
 function watchHTML(){
